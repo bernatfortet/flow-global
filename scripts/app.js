@@ -1,0 +1,50 @@
+(function() {
+  var getHeight, onExpand, parllax;
+
+  $(document).ready(function() {
+    parllax();
+    return $('.more-button').on('click', onExpand);
+  });
+
+  onExpand = function() {
+    var more;
+    more = $(this).parent().find('.more');
+    if (more.height() === 0) {
+      more.css('height', 'auto');
+      return $(this).html('Less');
+    } else {
+      more.css('height', 0);
+      return $(this).html('More');
+    }
+  };
+
+  parllax = function() {
+    var i, j, results;
+    $('.parallax-window').css('height', getHeight());
+    results = [];
+    for (i = j = 1; j <= 4; i = ++j) {
+      console.log($(".parallax-window.r" + i));
+      results.push($(".parallax-window.r" + i).parallax({
+        imageSrc: "../images/row_" + i + ".jpg",
+        naturalWidth: 3096,
+        naturalHeight: 1000,
+        speed: 0.8,
+        bleed: 5,
+        positonY: 0,
+        zIndex: 20
+      }));
+    }
+    return results;
+  };
+
+  getHeight = function() {
+    var isMobile;
+    isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    if (!isMobile) {
+      return $(window).outerHeight() / 1.8;
+    } else {
+      return $(window).outerHeight() / 4;
+    }
+  };
+
+}).call(this);
