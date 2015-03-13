@@ -1,0 +1,65 @@
+@import "style-global.less";
+
+//@import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700");
+
+.lato{ font-family: 'Lato', sans-serif; }
+@highlight:#743191;
+
+
+
+//Main Structure
+html, body{ width:100%; height:100%; background:black;}
+
+.header{ width:100%; height:340px; background:url('../images/header-bkg.jpg') no-repeat; .bg-size(cover);}
+	.logo{ width:163px; height:186px; margin:0 auto; .rel; top:70px; background:url('../images/logo.png') no-repeat; .bg-size(cover); }
+
+.text-block{ padding:70px 0; background:white;
+	.text{ width:80%; max-width:800px; margin:0 auto; .copy; color:#3C3C3C; }
+	strong{ color: @highlight; }
+
+	.more-button{.button; }
+	.more{ height:0; .overflow; }
+	li{ list-style:none; }
+}
+
+.parallax-window{ height:1000px; background: transparent; }
+
+
+
+.footer{ padding-top:20px; background:#272727; color:white;
+	h3{ .h3; margin:72px 0 16px; color:white;}
+	p{ .p; color:fade(white, 40%); }
+	.form{}
+		input{ margin-right:4px; padding:7px 20px; .button-text; font-weight:300;  border:0; .br(2px); outline:0;  }
+		.submit{}
+
+}
+
+.button{ .ib; padding:10px 20px; background:@highlight; .button-text; color:white; .br(2px); .anchor; .anim;
+	&:hover{ background:lighten(@highlight, 20%); .anim; }
+}
+
+
+//Text Styles
+.copy{ .fs(26px, 36px); .lato; font-weight:300; }
+.h3{ .fs(28px); }
+.p{ .fs(24px, 36px); font-weight:300; }
+.button-text{ .fs(18px); font-weight:400; }
+
+
+// Landscape phone to portrait tablet
+@media (max-width: 979px) {
+}
+ 
+// Landscape phones and down 
+@media (max-width: 780px) {
+}
+@media (max-width: 480px) {
+	.copy{ .fs(22px, 34px); }
+	.h3{ .fs(24px); }
+	.p{ .fs(20px, 32px); }
+	.button-text{ .fs(14px); }
+	
+
+
+}
