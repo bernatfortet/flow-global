@@ -11,9 +11,21 @@
     more = $(this).parent().find('.more');
     if (more.height() === 0) {
       more.css('height', 'auto');
-      return $(this).html('Less');
+      $('html, body').animate({
+        scrollTop: more.offset().top
+      }, 300);
+      $(this).html('Less');
+      return jQuery(window).trigger('resize').trigger('scroll');
     } else {
-      more.css('height', 0);
+      $('html, body').animate({
+        scrollTop: $(this).parent().offset().top - $(window).outerHeight() / 2
+      }, 600, function() {
+        return more.animate({
+          'height': 0
+        }, 150, function() {
+          return jQuery(window).trigger('resize').trigger('scroll');
+        });
+      });
       return $(this).html('More');
     }
   };
