@@ -37,7 +37,7 @@
     for (i = j = 1; j <= 4; i = ++j) {
       console.log($(".parallax-window.r" + i));
       results.push($(".parallax-window.r" + i).parallax({
-        imageSrc: "../images/row_" + i + ".jpg",
+        imageSrc: "./row_" + i + ".jpg",
         naturalWidth: 3096,
         naturalHeight: 1000,
         speed: 0.8,
