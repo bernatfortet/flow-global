@@ -1,10 +1,21 @@
 (function() {
-  var getHeight, onExpand, parllax;
+  var getHeight, onExpand, onPassword, parllax;
 
   $(document).ready(function() {
     parllax();
-    return $('.more-button').on('click', onExpand);
+    $('.more-button').on('click', onExpand);
+    return $('.password form').on('submit', onPassword);
   });
+
+  onPassword = function(event) {
+    var password;
+    console.log($(event.target));
+    password = $(event.target).find('input').val();
+    if (password === 'flow123') {
+      $('.password').fadeOut(400);
+    }
+    return event.preventDefault();
+  };
 
   onExpand = function() {
     var more;

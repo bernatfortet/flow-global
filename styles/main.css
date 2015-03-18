@@ -501,3 +501,107 @@ body {
     letter-spacing: 0;
   }
 }
+.password {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  position: fixed;
+  background: white;
+}
+.password .input {
+  width: 300px;
+  height: 32px;
+  position: absolute;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 50%;
+  margin-left: -150px;
+}
+.password .input input {
+  width: 200px;
+  height: 100%;
+}
+.password .input .button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #743191;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: 0;
+  font-weight: 400;
+  color: white;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  cursor: pointer;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 100ms;
+  -webkit-transition-timing-function: linear;
+  -moz-transition-property: all;
+  -moz-transition-duration: 100ms;
+  -moz-transition-timing-function: linear;
+  -ms-transition-property: all;
+  -ms-transition-duration: 100ms;
+  -ms-transition-timing-function: linear;
+  -o-transition-property: all;
+  -o-transition-duration: 100ms;
+  -o-transition-timing-function: linear;
+  transition-property: all;
+  transition-duration: 100ms;
+  transition-timing-function: linear;
+}
+.password .input .button:hover {
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -webkit-transition-duration: 150ms;
+  -webkit-transition-timing-function: linear;
+  -ms-transition-property: all;
+  -ms-transition-duration: 150ms;
+  -ms-transition-timing-function: linear;
+  -o-transition-property: all;
+  -o-transition-duration: 150ms;
+  -o-transition-timing-function: linear;
+  transition-property: all;
+  transition-duration: 150ms;
+  transition-timing-function: linear;
+}
+.password .input .button:hover {
+  background: #a95fc9;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 100ms;
+  -webkit-transition-timing-function: linear;
+  -moz-transition-property: all;
+  -moz-transition-duration: 100ms;
+  -moz-transition-timing-function: linear;
+  -ms-transition-property: all;
+  -ms-transition-duration: 100ms;
+  -ms-transition-timing-function: linear;
+  -o-transition-property: all;
+  -o-transition-duration: 100ms;
+  -o-transition-timing-function: linear;
+  transition-property: all;
+  transition-duration: 100ms;
+  transition-timing-function: linear;
+}
+.password .input .button:hover:hover {
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -webkit-transition-duration: 150ms;
+  -webkit-transition-timing-function: linear;
+  -ms-transition-property: all;
+  -ms-transition-duration: 150ms;
+  -ms-transition-timing-function: linear;
+  -o-transition-property: all;
+  -o-transition-duration: 150ms;
+  -o-transition-timing-function: linear;
+  transition-property: all;
+  transition-duration: 150ms;
+  transition-timing-function: linear;
+}
