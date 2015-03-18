@@ -135,6 +135,7 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
+  font-family: 'Lato', sans-serif;
 }
 .header {
   width: 100%;
@@ -528,6 +529,7 @@ body {
 .password .input input {
   width: 200px;
   height: 100%;
+  font-family: 'Lato', sans-serif;
 }
 .password .input .button {
   display: inline-block;
@@ -557,6 +559,7 @@ body {
   transition-property: all;
   transition-duration: 100ms;
   transition-timing-function: linear;
+  font-family: 'Lato', sans-serif;
 }
 .password .input .button:hover {
   -webkit-transition-property: all;
