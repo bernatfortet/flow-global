@@ -374,6 +374,7 @@ body.protected #Web {
   transition-property: all;
   transition-duration: 100ms;
   transition-timing-function: linear;
+  text-decoration: none;
 }
 .text-block .more-button:hover {
   -webkit-transition-property: all;
@@ -495,6 +496,7 @@ body.protected #Web {
   transition-property: all;
   transition-duration: 100ms;
   transition-timing-function: linear;
+  text-decoration: none;
 }
 .button:hover {
   -webkit-transition-property: all;
@@ -578,6 +580,7 @@ body.protected #Web {
   transition-property: all;
   transition-duration: 100ms;
   transition-timing-function: linear;
+  text-decoration: none;
 }
 .mc-field-group .mc-embedded-subscribe:hover {
   -webkit-transition-property: all;
@@ -730,6 +733,7 @@ body.protected #Web {
   transition-property: all;
   transition-duration: 100ms;
   transition-timing-function: linear;
+  text-decoration: none;
   font-family: 'Lato', sans-serif;
 }
 .password .input .button:hover {
