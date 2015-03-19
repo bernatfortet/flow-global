@@ -2,7 +2,6 @@
   var getHeight, onExpand, onPassword, parllax;
 
   $(document).ready(function() {
-    parllax();
     $('.more-button').on('click', onExpand);
     return $('.password form').on('submit', onPassword);
   });
@@ -12,6 +11,7 @@
     password = $(event.target).find('input').val();
     if (password === 'flow123') {
       $('.password').fadeOut(400);
+      parllax();
     }
     return event.preventDefault();
   };
