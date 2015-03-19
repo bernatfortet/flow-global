@@ -12,6 +12,7 @@
     if (password === 'flow123') {
       $('.password').fadeOut(400);
       parllax();
+      $('body').addClass('enter');
     }
     return event.preventDefault();
   };
