@@ -1,21 +1,29 @@
 (function() {
-  var getHeight, onExpand, onPassword, parllax;
+  var checkPasswordAndGo, getHeight, onExpand, parllax;
 
   $(document).ready(function() {
     $('.more-button').on('click', onExpand);
-    return $('.password form').on('submit', onPassword);
+    $('.password form').on('submit', function(event) {
+      var password;
+      password = $(event.target).find('input').val();
+      checkPasswordAndGo(password);
+      return event.preventDefault();
+    });
+    return $('.password .button').on('click', function(event) {
+      var password;
+      password = $(event.target).parent().find('input').val();
+      checkPasswordAndGo(password);
+      return event.preventDefault();
+    });
   });
 
-  onPassword = function(event) {
-    var password;
-    password = $(event.target).find('input').val();
+  checkPasswordAndGo = function(password) {
     if (password === '123flow') {
       $('.password').fadeOut(400);
       $('body').removeClass('protected');
       parllax();
-      jQuery(window).trigger('resize').trigger('scroll');
+      return jQuery(window).trigger('resize').trigger('scroll');
     }
-    return event.preventDefault();
   };
 
   onExpand = function() {
