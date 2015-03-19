@@ -300,10 +300,9 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Lato', sans-serif;
-  overflow: hidden;
 }
-body.enter {
-  overflow: scroll;
+body.protected {
+  overflow: hidden;
 }
 .header {
   width: 100%;

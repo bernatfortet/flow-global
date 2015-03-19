@@ -11,8 +11,9 @@
     password = $(event.target).find('input').val();
     if (password === 'flow123') {
       $('.password').fadeOut(400);
+      $('body').removeClass('protected');
       parllax();
-      $('body').addClass('enter');
+      jQuery(window).trigger('resize').trigger('scroll');
     }
     return event.preventDefault();
   };
@@ -46,6 +47,7 @@
     $('.parallax-window').css('height', getHeight());
     results = [];
     for (i = j = 1; j <= 4; i = ++j) {
+      console.log($(".parallax-window.r" + i));
       results.push($(".parallax-window.r" + i).parallax({
         imageSrc: "./images/row_" + i + ".jpg",
         naturalWidth: 3096,
