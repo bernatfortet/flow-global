@@ -9,7 +9,7 @@
   onPassword = function(event) {
     var password;
     password = $(event.target).find('input').val();
-    if (password === 'flow123') {
+    if (password === '123flow') {
       $('.password').fadeOut(400);
       $('body').removeClass('protected');
       parllax();
