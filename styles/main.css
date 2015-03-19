@@ -675,6 +675,7 @@ body {
   top: 0;
   position: fixed;
   background: white;
+  z-index: 9999;
 }
 .password .input {
   width: 300px;
