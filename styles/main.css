@@ -308,6 +308,9 @@ body.protected {
 body.protected #Web {
   display: none;
 }
+input {
+  outline: 0;
+}
 .header {
   width: 100%;
   height: 340px;
