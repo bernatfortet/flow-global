@@ -303,6 +303,7 @@ body {
 }
 body.protected {
   overflow: hidden;
+  background: #272727;
 }
 body.protected #Web {
   display: none;
@@ -315,6 +316,11 @@ body.protected #Web {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  border-radius: 500% / 58%;
+  -moz-border-radius: 500% / 58%;
+  -webkit-border-radius: 500% / 58%;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
 }
 .logo {
   width: 163px;
@@ -330,11 +336,10 @@ body.protected #Web {
 }
 .text-block {
   padding: 70px 0;
-  background: white;
 }
 .text-block .text {
   width: 80%;
-  max-width: 800px;
+  max-width: 850px;
   margin: 0 auto;
   font-size: 26px;
   line-height: 36px;
@@ -342,6 +347,7 @@ body.protected #Web {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   color: #3C3C3C;
+  text-align: center;
 }
 .text-block strong {
   color: #743191;
@@ -355,9 +361,9 @@ body.protected #Web {
   letter-spacing: 0;
   font-weight: 400;
   color: white;
-  border-radius: 2px;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
   cursor: pointer;
   -webkit-transition-property: all;
   -webkit-transition-duration: 100ms;
@@ -435,28 +441,49 @@ body.protected #Web {
   height: 1000px;
   background: transparent;
 }
+.parallax-mirror {
+  border-radius: 500% / 58%;
+  -moz-border-radius: 500% / 58%;
+  -webkit-border-radius: 500% / 58%;
+}
+.parallax-mirror:first-child {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
 .footer {
   padding-top: 20px;
+  position: relative;
   background: #272727;
   color: white;
 }
-.footer h3 {
+.footer .cheat {
+  width: 100%;
+  height: 130%;
+  position: absolute;
+  top: -20%;
+  background: #272727;
+}
+.footer .content {
+  position: relative;
+  z-index: 2;
+}
+.footer .content h3 {
   font-size: 28px;
   line-height: 1;
   letter-spacing: 0;
   margin: 72px 0 16px;
   color: white;
 }
-.footer p {
+.footer .content p {
   font-size: 24px;
   line-height: 36px;
   letter-spacing: 0;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.4);
 }
-.footer input {
+.footer .content input {
   margin-right: 4px;
-  padding: 7px 20px;
+  padding: 9px 20px;
   font-size: 18px;
   line-height: 1;
   letter-spacing: 0;
@@ -477,9 +504,9 @@ body.protected #Web {
   letter-spacing: 0;
   font-weight: 400;
   color: white;
-  border-radius: 2px;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
   cursor: pointer;
   -webkit-transition-property: all;
   -webkit-transition-duration: 100ms;
@@ -546,6 +573,15 @@ body.protected #Web {
   transition-duration: 150ms;
   transition-timing-function: linear;
 }
+#mc_embed_signup {
+  width: 330px;
+  margin: 0 auto;
+}
+#mce-EMAIL {
+  position: relative;
+  top: 4px;
+  padding: 7px 10px;
+}
 .mc-field-group {
   display: inline;
 }
@@ -561,9 +597,9 @@ body.protected #Web {
   letter-spacing: 0;
   font-weight: 400;
   color: white;
-  border-radius: 2px;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
   cursor: pointer;
   -webkit-transition-property: all;
   -webkit-transition-duration: 100ms;
@@ -654,28 +690,6 @@ body.protected #Web {
   letter-spacing: 0;
   font-weight: 400;
 }
-@media (max-width: 480px) {
-  .copy {
-    font-size: 22px;
-    line-height: 34px;
-    letter-spacing: 0;
-  }
-  .h3 {
-    font-size: 24px;
-    line-height: 1;
-    letter-spacing: 0;
-  }
-  .p {
-    font-size: 20px;
-    line-height: 32px;
-    letter-spacing: 0;
-  }
-  .button-text {
-    font-size: 14px;
-    line-height: 1;
-    letter-spacing: 0;
-  }
-}
 .password {
   width: 100%;
   height: 100%;
@@ -687,7 +701,7 @@ body.protected #Web {
   z-index: 9999;
 }
 .password .input {
-  width: 300px;
+  width: 330px;
   height: 32px;
   position: absolute;
   position: relative;
@@ -703,7 +717,15 @@ body.protected #Web {
 .password .input input {
   width: 200px;
   height: 100%;
+  padding: 3px 10px;
+  position: relative;
+  top: -1px;
+  background: rgba(0, 0, 0, 0.05);
+  border: 0;
   font-family: 'Lato', sans-serif;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
 }
 .password .input .button {
   display: inline-block;
@@ -714,9 +736,9 @@ body.protected #Web {
   letter-spacing: 0;
   font-weight: 400;
   color: white;
-  border-radius: 2px;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
   cursor: pointer;
   -webkit-transition-property: all;
   -webkit-transition-duration: 100ms;
@@ -783,4 +805,26 @@ body.protected #Web {
   transition-property: all;
   transition-duration: 150ms;
   transition-timing-function: linear;
+}
+@media (max-width: 480px) {
+  .copy {
+    font-size: 22px;
+    line-height: 34px;
+    letter-spacing: 0;
+  }
+  .h3 {
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: 0;
+  }
+  .p {
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0;
+  }
+  .button-text {
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 0;
+  }
 }
