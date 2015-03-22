@@ -339,6 +339,7 @@ input {
 }
 .text-block {
   padding: 70px 0;
+  text-align: justify;
 }
 .text-block .text {
   width: 80%;
@@ -350,7 +351,6 @@ input {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   color: #3C3C3C;
-  text-align: center;
 }
 .text-block strong {
   color: #743191;
@@ -384,6 +384,7 @@ input {
   transition-duration: 100ms;
   transition-timing-function: linear;
   text-decoration: none;
+  margin: 0 auto;
 }
 .text-block .more-button:hover {
   -webkit-transition-property: all;
@@ -438,7 +439,14 @@ input {
   overflow: hidden;
 }
 .text-block li {
+  position: relative;
   list-style: none;
+  margin-bottom: 14px;
+}
+.text-block li:before {
+  content: '· ';
+  position: absolute;
+  left: -20px;
 }
 .parallax-window {
   height: 1000px;
