@@ -353,12 +353,12 @@ input {
   color: #3C3C3C;
 }
 .text-block strong {
-  color: #743191;
+  color: #bc52c2;
 }
 .text-block .more-button {
   display: inline-block;
   padding: 10px 20px;
-  background: #743191;
+  background: #bc52c2;
   font-size: 18px;
   line-height: 1;
   letter-spacing: 0;
@@ -402,7 +402,7 @@ input {
   transition-timing-function: linear;
 }
 .text-block .more-button:hover {
-  background: #a95fc9;
+  background: #d99ddd;
   -webkit-transition-property: all;
   -webkit-transition-duration: 100ms;
   -webkit-transition-timing-function: linear;
@@ -509,7 +509,7 @@ input {
 .button {
   display: inline-block;
   padding: 10px 20px;
-  background: #743191;
+  background: #bc52c2;
   font-size: 18px;
   line-height: 1;
   letter-spacing: 0;
@@ -552,7 +552,7 @@ input {
   transition-timing-function: linear;
 }
 .button:hover {
-  background: #a95fc9;
+  background: #d99ddd;
   -webkit-transition-property: all;
   -webkit-transition-duration: 100ms;
   -webkit-transition-timing-function: linear;
@@ -598,7 +598,7 @@ input {
 .mc-field-group .mc-embedded-subscribe {
   display: inline-block;
   padding: 10px 20px;
-  background: #743191;
+  background: #bc52c2;
   font-size: 18px;
   line-height: 1;
   letter-spacing: 0;
@@ -641,7 +641,7 @@ input {
   transition-timing-function: linear;
 }
 .mc-field-group .mc-embedded-subscribe:hover {
-  background: #a95fc9;
+  background: #d99ddd;
   -webkit-transition-property: all;
   -webkit-transition-duration: 100ms;
   -webkit-transition-timing-function: linear;
@@ -672,6 +672,13 @@ input {
   transition-property: all;
   transition-duration: 150ms;
   transition-timing-function: linear;
+}
+small {
+  display: block;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: right;
 }
 .copy {
   font-size: 26px;
@@ -737,7 +744,7 @@ input {
 .password .input .button {
   display: inline-block;
   padding: 10px 20px;
-  background: #743191;
+  background: #bc52c2;
   font-size: 18px;
   line-height: 1;
   letter-spacing: 0;
@@ -781,7 +788,7 @@ input {
   transition-timing-function: linear;
 }
 .password .input .button:hover {
-  background: #a95fc9;
+  background: #d99ddd;
   -webkit-transition-property: all;
   -webkit-transition-duration: 100ms;
   -webkit-transition-timing-function: linear;
