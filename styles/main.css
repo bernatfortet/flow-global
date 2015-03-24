@@ -584,10 +584,6 @@ input {
   transition-duration: 150ms;
   transition-timing-function: linear;
 }
-#mc_embed_signup {
-  width: 330px;
-  margin: 0 auto;
-}
 #mce-EMAIL {
   position: relative;
   top: 4px;
