@@ -1,5 +1,5 @@
 (function() {
-  var checkPasswordAndGo, getHeight, onExpand, parllax;
+  var checkPasswordAndGo, getHeight, init, onExpand, parllax;
 
   $(document).ready(function() {
     $('.more-button').on('click', onExpand);
@@ -9,21 +9,28 @@
       checkPasswordAndGo(password);
       return event.preventDefault();
     });
-    return $('.password .button').on('click', function(event) {
+    $('.password .button').on('click', function(event) {
       var password;
       password = $(event.target).parent().find('input').val();
       checkPasswordAndGo(password);
       return event.preventDefault();
     });
+    if (window.location.origin === "http://localhost:9000") {
+      return init();
+    }
   });
 
   checkPasswordAndGo = function(password) {
     if (password === '123flow') {
-      $('.password').fadeOut(400);
-      $('body').removeClass('protected');
-      parllax();
-      return jQuery(window).trigger('resize').trigger('scroll');
+      return init();
     }
+  };
+
+  init = function() {
+    $('.password').fadeOut(400);
+    $('body').removeClass('protected');
+    parllax();
+    return jQuery(window).trigger('resize').trigger('scroll');
   };
 
   onExpand = function() {

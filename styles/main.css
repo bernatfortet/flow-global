@@ -352,6 +352,13 @@ input {
   font-weight: 300;
   color: #3C3C3C;
 }
+.text-block h3 {
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: 0;
+  margin-top: 64px;
+  color: #6a276e;
+}
 .text-block strong {
   color: #bc52c2;
 }
@@ -442,11 +449,12 @@ input {
   position: relative;
   list-style: none;
   margin-bottom: 14px;
+  padding-left: 20px;
 }
 .text-block li:before {
   content: '· ';
   position: absolute;
-  left: -20px;
+  left: 0;
 }
 .parallax-window {
   height: 1000px;
