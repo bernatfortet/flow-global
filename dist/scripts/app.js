@@ -1,19 +1,58 @@
 (function() {
-  var getHeight, onExpand, parllax;
+  var checkPasswordAndGo, getHeight, init, onExpand, parllax;
 
   $(document).ready(function() {
-    parllax();
-    return $('.more-button').on('click', onExpand);
+    $('.more-button').on('click', onExpand);
+    $('.password form').on('submit', function(event) {
+      var password;
+      password = $(event.target).find('input').val();
+      checkPasswordAndGo(password);
+      return event.preventDefault();
+    });
+    $('.password .button').on('click', function(event) {
+      var password;
+      password = $(event.target).parent().find('input').val();
+      checkPasswordAndGo(password);
+      return event.preventDefault();
+    });
+    if (window.location.origin === "http://localhost:9000") {
+      return init();
+    }
   });
+
+  checkPasswordAndGo = function(password) {
+    if (password === '123flow') {
+      return init();
+    }
+  };
+
+  init = function() {
+    $('.password').fadeOut(400);
+    $('body').removeClass('protected');
+    parllax();
+    return jQuery(window).trigger('resize').trigger('scroll');
+  };
 
   onExpand = function() {
     var more;
     more = $(this).parent().find('.more');
     if (more.height() === 0) {
       more.css('height', 'auto');
-      return $(this).html('Less');
+      $('html, body').animate({
+        scrollTop: more.offset().top
+      }, 300);
+      $(this).html('Less');
+      return jQuery(window).trigger('resize').trigger('scroll');
     } else {
-      more.css('height', 0);
+      $('html, body').animate({
+        scrollTop: $(this).parent().offset().top - $(window).outerHeight() / 2
+      }, 600, function() {
+        return more.animate({
+          'height': 0
+        }, 150, function() {
+          return jQuery(window).trigger('resize').trigger('scroll');
+        });
+      });
       return $(this).html('More');
     }
   };
@@ -25,7 +64,7 @@
     for (i = j = 1; j <= 4; i = ++j) {
       console.log($(".parallax-window.r" + i));
       results.push($(".parallax-window.r" + i).parallax({
-        imageSrc: "../images/row_" + i + ".jpg",
+        imageSrc: "./images/row_" + i + ".jpg",
         naturalWidth: 3096,
         naturalHeight: 1000,
         speed: 0.8,
