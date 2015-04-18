@@ -97,11 +97,22 @@ html(lange="en")
 
 			.parallax-window.r4
 
-
 		.password
 			form.input
 				input(placeholder="Insert Password", autofocus)
 				.button Enter
+			script( src="scripts/lib/parallax.min.js", type"text/javascript")
+			script( src="scripts/app.js" )
+			script( type="text/javascript", src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js", data-dojo-config="usePlainJson: true, isDebug: false")
+			script( type="text/javascript")
+				require(["mojo/signup-forms/Loader"], function(L) {
+					L.start({
+						"baseUrl":"mc.us10.list-manage.com",
+						"uuid":"fec2ff9c934ae2f6e18c21d39",
+						"lid":"47f6b03e6b"
+					})
+				})
+				console.log('as')
 
 		#Scripts
 				script( src="scripts/lib/jquery.min.js" )
