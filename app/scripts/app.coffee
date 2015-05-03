@@ -15,8 +15,14 @@ $(document).ready( ->
 	)
 	if( window.location.origin == "http://localhost:9000" )
 		init()
+
+
+
 )
 
+$(document).keypress 'g', (e) ->
+  if e.ctrlKey
+    $('.grid').toggle()
 
 checkPasswordAndGo = (password) ->
 	if( password == '123flow' )
