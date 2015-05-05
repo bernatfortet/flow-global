@@ -578,6 +578,13 @@ p {
   word-break: break-word;
   word-wrap: break-word;
 }
+.orange {
+  color: #eb7261 !important;
+  text-align: center !important;
+}
+.extraMargin {
+  margin-top: 70px;
+}
 .arcadium .header {
   background-image: url('../images/header-arcadium-bkg.jpg');
 }
