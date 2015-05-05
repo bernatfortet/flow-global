@@ -20,6 +20,12 @@
     }
   });
 
+  $(document).keypress('g', function(e) {
+    if (e.ctrlKey) {
+      return $('.grid').toggle();
+    }
+  });
+
   checkPasswordAndGo = function(password) {
     if (password === '123flow') {
       return init();
@@ -34,12 +40,14 @@
   };
 
   onExpand = function() {
-    var more;
-    more = $(this).parent().find('.more');
-    if (more.height() === 0) {
-      more.css('height', 'auto');
+    var moreButton, moreSection;
+    moreButton = $(this);
+    moreSection = $(this).parent().find('.more');
+    if (moreSection.height() === 0) {
+      moreButton.addClass('expanded');
+      moreSection.css('height', 'auto');
       $('html, body').animate({
-        scrollTop: more.offset().top
+        scrollTop: moreSection.offset().top
       }, 300);
       $(this).html('Less');
       return jQuery(window).trigger('resize').trigger('scroll');
@@ -47,12 +55,13 @@
       $('html, body').animate({
         scrollTop: $(this).parent().offset().top - $(window).outerHeight() / 2
       }, 600, function() {
-        return more.animate({
+        return moreSection.animate({
           'height': 0
         }, 150, function() {
           return jQuery(window).trigger('resize').trigger('scroll');
         });
       });
+      moreButton.removeClass('expanded');
       return $(this).html('More');
     }
   };
