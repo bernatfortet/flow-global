@@ -37,18 +37,23 @@ init = ->
 
 
 onExpand = ->
-	more = $(this).parent().find('.more')
-	if( more.height() == 0 )
-		more.css('height', 'auto')
-		$('html, body').animate({ scrollTop: more.offset().top }, 300);
+	moreButton = $(this)
+	moreSection = $(this).parent().find('.more')
+
+	if( moreSection.height() == 0 )
+		moreButton.addClass('expanded')
+		moreSection.css('height', 'auto')
+		$('html, body').animate({ scrollTop: moreSection.offset().top }, 300);
 		$(this).html('Less')
 		jQuery(window).trigger('resize').trigger('scroll');
 	else
 		$('html, body').animate({ scrollTop: $(this).parent().offset().top - $(window).outerHeight()/2 }, 600, ->
-			more.animate({'height': 0}, 150, ->
+			moreSection.animate({'height': 0}, 150, ->
 				jQuery(window).trigger('resize').trigger('scroll');
 			)
 		);
+		moreButton.removeClass('expanded')
+		
 
 		$(this).html('More')
 		#Scroll To
