@@ -27,7 +27,7 @@
   });
 
   checkPasswordAndGo = function(password) {
-    if (password === '123flow') {
+    if (password === '123flow' || password === '456arc') {
       return init();
     }
   };

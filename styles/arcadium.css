@@ -1142,17 +1142,6 @@ body.protected #Web {
   transition-timing-function: linear;
   text-decoration: none;
   text-align: center;
-  display: inline-block;
-  padding: 10px 20px;
-  background: #bc52c2;
-  font-size: 18px;
-  line-height: 1;
-  letter-spacing: 0;
-  font-weight: 400;
-  color: white;
-  border-radius: 25px;
-  -moz-border-radius: 25px;
-  -webkit-border-radius: 25px;
   font-family: 'Lato', sans-serif;
 }
 .password .input .button:hover {
@@ -1201,9 +1190,6 @@ body.protected #Web {
   transition-property: all;
   transition-duration: 150ms;
   transition-timing-function: linear;
-}
-.password .input .button:hover {
-  background: #d99ddd;
 }
 #mce-EMAIL {
   position: relative;
