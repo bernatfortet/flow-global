@@ -587,6 +587,7 @@ p {
 }
 .arcadium .header {
   background-image: url('../images/header-arcadium-bkg.jpg');
+  background-color: #EF8155;
 }
 .arcadium .logo {
   width: 473px;
