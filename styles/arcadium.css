@@ -564,7 +564,7 @@ blockquote {
   font-family: 'ff-tisa-web-pro';
   text-align: center;
   font-style: italic;
-  color: #eb7261;
+  color: #73a31f;
 }
 blockquote .author {
   margin-top: 16px;
@@ -579,14 +579,14 @@ p {
   word-wrap: break-word;
 }
 .orange {
-  color: #eb7261 !important;
+  color: #73a31f !important;
   text-align: center !important;
 }
 .extraMargin {
   margin-top: 70px;
 }
 .arcadium .header {
-  background-image: url('../images/header-arcadium-bkg.jpg');
+  background-image: url('../images/header-arcadium-bkg2.jpg');
   background-color: #EF8155;
 }
 .arcadium .logo {
@@ -616,23 +616,23 @@ p {
   line-height: 1.5;
   letter-spacing: 0;
   font-family: 'nimbus-sans';
-  color: #555555;
+  color: #6e5c3c;
   text-align: left;
   letter-spacing: 0.05px;
 }
 .arcadium h3 {
-  color: #555555;
+  color: #6e5c3c;
   font-family: 'nimbus-sans';
   font-weight: 500;
 }
 .arcadium a {
   text-decoration: none;
-  border-bottom: 2px solid #eb7261;
+  border-bottom: 2px solid #73a31f;
   font-family: 'nimbus-sans';
-  color: #555555;
+  color: #6e5c3c;
 }
 .arcadium a:hover {
-  color: #eb7261;
+  color: #73a31f;
 }
 .arcadium .links {
   text-align: left;
@@ -645,11 +645,11 @@ p {
   padding-left: 0;
 }
 .arcadium strong {
-  color: #eb7261;
+  color: #73a31f;
 }
 .arcadium hr {
   border: 0;
-  border-top: 2px solid rgba(85, 85, 85, 0.5);
+  border-top: 2px solid rgba(110, 92, 60, 0.5);
   margin-bottom: 24px;
 }
 .arcadium .footer h2,
@@ -672,7 +672,7 @@ p {
   position: absolute;
   left: 8px;
   top: 18px;
-  background: #d4d4d4;
+  background: #e1d8c8;
 }
 .timeline .event {
   margin-bottom: 10px;
@@ -680,7 +680,7 @@ p {
 .timeline .event .event-text {
   font-weight: bold;
   margin-left: 20px;
-  color: #555555;
+  color: #6e5c3c;
 }
 .timeline .event .event-text:before {
   content: '•';
@@ -690,7 +690,7 @@ p {
   letter-spacing: 0;
   left: -17px;
   top: -4px;
-  color: #555555;
+  color: #6e5c3c;
 }
 .timeline .event .date {
   margin-left: 35px;
@@ -925,9 +925,9 @@ p {
   display: inline-block;
   margin: 0 auto;
   padding: 10px 20px;
-  color: #555555;
+  color: #6e5c3c;
   font-family: 'nimbus-sans';
-  border-bottom: 2px solid #555555;
+  border-bottom: 2px solid #6e5c3c;
 }
 .arcadium .more-button:hover {
   -webkit-transition-property: all;
@@ -978,7 +978,7 @@ p {
 }
 .arcadium .more-button:hover {
   padding: 10px 60px;
-  color: #eb7261;
+  color: #73a31f;
 }
 .arcadium .more-button.expanded {
   padding: 10px 60px;
