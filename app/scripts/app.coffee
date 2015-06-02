@@ -1,6 +1,7 @@
 $(document).ready( ->
 	$('.more-button').on('click', onExpand )
 
+	###
 	$('.password form').on('submit', (event) ->
 
 		password = $(event.target).find('input').val()
@@ -15,17 +16,13 @@ $(document).ready( ->
 	)
 	if( window.location.origin == "http://localhost:9000" )
 		init()
-
-
+	###
+	init()
 
 )
 
-$(document).keypress 'g', (e) ->
-  if e.ctrlKey
-    $('.grid').toggle()
-
 checkPasswordAndGo = (password) ->
-	if( password == '123flow' )
+	if( password == '123flow' || password == '456arc' )
 		init()
 
 init = ->

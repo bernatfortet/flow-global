@@ -25,7 +25,7 @@
 
 // Colors
 @highlight:#BC52C2; //#743191;
-@arcadium:#eb7261;
+@arcadium:#73A31F; //eb7261
 
 @lightGrey:#f2f2f2;
 
@@ -118,8 +118,11 @@ blockquote{ width:95%; margin:1.4em auto;  .rel; .fs(1.1rem, 1.5); .quoteFont; .
 p{ word-break:break-word; word-wrap:break-word; }
 
 
-@textColor:rgb(85, 85, 85); 
+//@textColor:rgb(85, 85, 85); 
+@textColor:#6E5C3C;
 
+.orange{ color:@arcadium !important; text-align:center !important;}
+.extraMargin{ margin-top:70px;}
 
 // -----------------------------------------------------------------------------------------------------------
 // Arcadium --------------------------------------------------------------------------------------------------
@@ -133,7 +136,7 @@ p{ word-break:break-word; word-wrap:break-word; }
 	//.header{ .br(0); }
 
 
-	.header{ background-image:url('../images/header-arcadium-bkg.jpg') }
+	.header{ background-image:url('../images/header-arcadium-bkg2.jpg'); background-color:#A0AF5A; }
 		.logo{ width:473px; height:220px; top:58px; background-image:url('../images/arcadium_logo.png'); }
 		.logo2{ width:298px; height:268px; top:40px; background-image:url('../images/arcadium_logo2.png'); }
 
@@ -180,6 +183,15 @@ p{ word-break:break-word; word-wrap:break-word; }
 
 
 
+.arcadium2{
+	.header{ height:900px; }
+		.logo{ top:100px; }
+
+		a{ width:200px; display:block; .rel; top:190px; margin:0 auto; padding-bottom:4px; color:white; text-align:center; border-bottom:2px solid white;
+			&:hover{ color: fade(white,50%); }
+		}
+
+}
 
 @oddColor:#f2f2f2;
 .odd{ background:@oddColor; }
@@ -273,7 +285,7 @@ body.protected{ overflow:hidden; background:@charcoal;
 .password{ .cover-all; .fixed; background:white; z-index:9999;
 	.input{width:330px; height:32px; .abs; .valign; left:50%; margin-left:-150px;
 		input{ width:200px; height:100%; padding:3px 10px; .rel; top:-1px; background:fade(black,5%); border:0; .lato; .br(4px); }
-		.button{ .pillButton; .lato; }
+		.button{ .button; .lato; }
 	}
 }
 
