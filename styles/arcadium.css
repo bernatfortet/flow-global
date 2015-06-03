@@ -587,7 +587,7 @@ p {
 }
 .arcadium .header {
   background-image: url('../images/header-arcadium-bkg2.jpg');
-  background-color: #EF8155;
+  background-color: #A0AF5A;
 }
 .arcadium .logo {
   width: 473px;
@@ -700,6 +700,26 @@ p {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=(50));
   filter: alpha(opacity = (50));
   opacity: 0.5;
+}
+.arcadium2 .header {
+  height: 900px;
+}
+.arcadium2 .logo {
+  top: 100px;
+}
+.arcadium2 a {
+  width: 200px;
+  display: block;
+  position: relative;
+  top: 190px;
+  margin: 0 auto;
+  padding-bottom: 4px;
+  color: white;
+  text-align: center;
+  border-bottom: 2px solid white;
+}
+.arcadium2 a:hover {
+  color: rgba(255, 255, 255, 0.5);
 }
 .odd {
   background: #f2f2f2;
