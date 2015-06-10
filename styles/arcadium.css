@@ -574,6 +574,10 @@ blockquote .author {
   font-weight: bold;
   text-align: center;
 }
+blockquote a {
+  font-family: 'ff-tisa-web-pro' !important;
+  color: #73a31f !important;
+}
 p {
   word-break: break-word;
   word-wrap: break-word;
@@ -1087,6 +1091,33 @@ p {
 }
 .pillButton:hover {
   background: #d99ddd;
+}
+.image-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.image-grid .img-grid {
+  width: 200px;
+  height: 200px;
+  margin: 4px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+}
+.image-grid .tall {
+  width: 333.33333333px;
+  height: 500px;
+}
+.image-grid .wide {
+  width: 400px;
+  height: 225px;
+}
+.flex {
+  display: flex;
 }
 .grid {
   width: 100%;
