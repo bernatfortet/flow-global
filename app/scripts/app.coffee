@@ -53,10 +53,6 @@ onExpand = ->
 		
 
 		$(this).html('More')
-		#Scroll To
-
-
-
 
 parllax = ->
 	$('.parallax-window').css('height', getHeight() )

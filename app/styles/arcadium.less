@@ -1,315 +1,155 @@
 @import "style-global.less";
 
-@import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700");
-
-// Fonts ---------------------------
-.lato{ font-family: 'Lato', sans-serif; }
-
-@tisa: 'ff-tisa-web-pro';
-@bernina: 'jaf-bernina-sans';
-@nimbus: 'nimbus-sans';
-@ptsans: 'pt-sans';
-@prenton: 'prenton';
-@dejarip: 'dejarip';
-@proxima: 'proxima-nova';
-@futura: 'futura';
-@lato: 'Lato';
-@minion: 'minion-pro';
-
-.mainFont{ font-family:@tisa; }
-.bodyFont{ font-family:@minion; }
-.quoteFont{ font-family:@tisa; }
-.titleFont{ font-family:@nimbus; }
-
-* { box-sizing: border-box; text-rendering: optimizelegibility; }
-
-// Colors
-@highlight:#BC52C2; //#743191;
-@arcadium:#73A31F; //eb7261
-
-@lightGrey:#f2f2f2;
-
-.flow{
-	@highlight:#BC52C2;
-}
-
-
-//Main Structure
-html, body{ width:100%; padding:0; margin:0; .lato; .fs(26px); }
-@m:8px;
-
-input{ outline:0;}
-@br:~"500% / 58%";
-
-.header{ width:100%; height:336px; background-repeat: no-repeat; .bg-size(cover); .br(@br); border-top-right-radius:0; border-top-left-radius:0;  }
-	.logo{ width:163px; height:186px; margin:0 auto; .rel; background-repeat:no-repeat; .bg-size(cover); }
-
-
-
-.text-block{ padding:64px 0; //text-align:justify;
-	svg{}
-	.text{ width:80%; max-width:850px; margin:0 auto; .copy; color:#3C3C3C;
-		//> p:first-child{ .tcenter; }
-	}
-	h3{ .h3; margin-top:64px; color:darken(@highlight, 25%); }
-	strong{ color: @highlight; }
-
-	.more{ height:0; .overflow; }
-}
-
-
-.content{} //Todo
-	li{ margin-bottom:16px; }
-
-
-// -----------------------------------------------------------------------------------------------------------
-// FLOW --------------------------------------------------------------------------------------------------
-// -----------------------------------------------------------------------------------------------------------
-
-.flow{
-	.header{ background-image:url('../images/header-bkg.jpg');
-		.logo{ width:163px; height:186px; top:70px; background-image:url('../images/logo.png'); }
-	} 
-
-	li{ .rel; list-style:none; margin-bottom:14px; padding-left:20px; }
-	li:before{ content:'· '; .abs; left:0; }
-
-
-	.footer{ padding-top:20px; }
-	.cheat{ width:100%; height:130%; .abs; top:-20%;  background:@charcoal; }
-
-
-	.button{ }
-}
-
-
-
-@charcoal: #272727;
-
-.footer{ .rel; background:@charcoal; color:@lightGrey;
-
-
-	.content{ .rel; z-index:2;
-		h3{ .h3; margin:72px 0 16px;}
-		p{ .p; color:fade(white, 40%); color:@lightGrey !important; }
-		.form{}
-			input{ margin-right:4px; padding:9px 20px; font-weight:300;  border:0; .br(2px); outline:0;  }
-			.submit{ .pillButton; }
-
-	}
-
-}
-
-
-
-//Text Styles
-.copy{ .fs(26px, 36px); .lato; font-weight:300; }
-.h3{ .fs(28px); }
-.p{ .fs(24px, 36px); font-weight:300; }
-.button-text{ .fs(18px); font-weight:400; }
-small{ display:block; .fs(14px); text-align:right; }
-
-
-blockquote{ width:95%; margin:1.4em auto;  .rel; .fs(1.1rem, 1.5); .quoteFont; .tcenter; font-style:italic; color:@arcadium;
-	.author{ margin-top:16px; .fs(0.8em, 1.4); font-weight:bold; .tcenter;}
-}
-
-
-p{ word-break:break-word; word-wrap:break-word; }
-
-
-//@textColor:rgb(85, 85, 85); 
-@textColor:#6E5C3C;
-
-.orange{ color:@arcadium !important; text-align:center !important;}
-.extraMargin{ margin-top:70px;}
-
-// -----------------------------------------------------------------------------------------------------------
-// Arcadium --------------------------------------------------------------------------------------------------
-// -----------------------------------------------------------------------------------------------------------
-
-// Structure
-
-.arcadium{
-
-	//Header
-	//.header{ .br(0); }
-
-
-	.header{ background-image:url('../images/header-arcadium-bkg2.jpg'); background-color:#A0AF5A; }
-		.logo{ width:473px; height:220px; top:58px; background-image:url('../images/arcadium_logo.png'); }
-		.logo2{ width:298px; height:268px; top:40px; background-image:url('../images/arcadium_logo2.png'); }
-
-	//Content
-	h2{ margin-top:24px; .fs(58px); font-weight:300; letter-spacing:-1.15px; .titleFont; .tcenter; }
-	//p{ .fs(1rem, 1.5); .bodyFont; color:@textColor; text-align:left; letter-spacing:0.15px }
-	p{ .fs(1.1rem, 1.5); .titleFont; color:@textColor; text-align:left; letter-spacing:0.05px }
-	blockquote{ }
-
-	h3{ color:@textColor; .titleFont; font-weight:500; }
-
-	a{ text-decoration:none; border-bottom:2px solid @arcadium; .titleFont; color:@textColor;
-		&:hover{ color:@arcadium; }
-	}
-
-	.links{ text-align:left;}
-
-	.text-block{ .tcenter; }
-
-	li{ list-style:none; padding-left:0; }
-	strong{ color: @arcadium; }
-
-	hr{ border:0; border-top:2px solid fade(@textColor, 50%); margin-bottom:24px;}
-
-
-	.footer{ 
-		h2, h3{ color:@lightGrey; }
-		p{ color:darken(@lightGrey, 50%); }
-	}
-
-}
-	.link{ .titleFont; }
-
-	.timeline{ .rel; .titleFont;
-		@timelineColor: @textColor;
-		.line{ width:1px; height:77%; .abs; left:8px; top:18px; background:lighten(@timelineColor, 50%);}
-		.event{ margin-bottom:10px; 
-			.event-text{ font-weight:bold; margin-left:20px; color:@textColor;
-				&:before{ content:'•'; position:relative; .fs(18px); left:-17px; top:-4px; color:@timelineColor; }
-			}
-			.date{ margin-left:35px; font-size:0.8em; .op(0.5); }
-		}
-	}
-
-
-
-.arcadium2{
-	.header{ height:900px; }
-		.logo{ top:100px; }
-
-		a{ width:200px; display:block; .rel; top:190px; margin:0 auto; padding-bottom:4px; color:white; text-align:center; border-bottom:2px solid white;
-			&:hover{ color: fade(white,50%); }
-		}
-
-}
-
-@oddColor:#f2f2f2;
-.odd{ background:@oddColor; }
-
-
-// -----------------------------------------------------------------------------------------------------------
-// OTHER --------------------------------------------------------------------------------------------------
-// -----------------------------------------------------------------------------------------------------------
-
-
-
-
-// Images
-.parallax-window{ height:1000px; background: transparent; }
-.parallax-mirror{ .br(@br); }
-.parallax-mirror:first-child{  border-bottom-right-radius:0; border-bottom-left-radius:0; }
-
-
-.img{ .rel; .br(@br);
-	&.edged{ width:100%;}
-	img{ width:100%; }
-
-	.quoted{ width:100%; .abs; bottom:0; color:white;
-		blockquote{ color:white; }
-	}
-}
-
-
-//Buttons
-.underlineButton{ .tcenter; }
-
-.inputButton{}
-
-@br:~"500% / 58%";
-
-
+//Maybe globalized?
 .button{ display:block; .anchor; .anim; text-decoration:none; .tcenter;
 	&:hover{ .anim; }
 }
 
-.flow{
-	.underlineButton{ .br(~"50%/10%");
-		&:hover{ .br(~"50%/30%"); }
+
+// Arcadium specific styles
+@tisa: 'ff-tisa-web-pro';
+@nimbus: 'nimbus-sans';
+
+@arcadium:#73A31F; 
+@arcadiumHighlight: #73a31f;
+
+@lightGrey:#f2f2f2;
+@lightBrown: #6E5C3C;
+
+
+@mainColor:@arcadium;
+@highlight:@arcadiumHighlight;
+@bodyColor: @lightBrown;
+
+
+// Font Configuration
+
+.mainFont{ font-family:@nimbus, @sansSerifFallBacks; }
+.titleFont{ font-family:@nimbus, @sansSerifFallBacks; }
+.bodyFont{ font-family:@nimbus, @sansSerifFallBacks; }
+.quoteFont{ font-family:@tisa, @serifFallBacks; }
+
+
+.s1{ .fs(56px); }
+.s2{ .fs(28px); }
+.s3{ .fs(22px, 1.4); }
+.s4{ .fs(16px, 1.4); }
+
+.defaultFontStyle{ .mainFont; color:@bodyColor; font-weight:300; line-height:1.5em;  }
+
+
+body, html{ font-size:100%; .defaultFontStyle; }
+
+
+
+//Main Structure
+html, body{ width:100%; padding:0; margin:0; .mainFont; }
+
+.fullWidth{ width:100%; }
+.noMarginTop{ margin-top:0; }
+
+//Global Sytles
+@oddColor:#f2f2f2;
+.odd{ background:@oddColor; }
+.anchor{ text-decoration:none; border-bottom:2px solid @arcadium; .titleFont; color:@bodyColor;
+	&:hover{ color:@arcadium; }
+}
+
+
+//Header
+.header{ width:100%; height:336px; margin-bottom:48px; background-repeat: no-repeat; .bg-size(cover); background-image:url('../images/header-arcadium-bkg2.jpg'); background-color:#A0AF5A;  }
+
+	.logo{ width:95%; max-width:473px; height:220px; .rel; top:58px; margin:0 auto; background-image:url('../images/arcadium_logo.png'); .noRepeat; .bg-size(contain); background-position:center;  }
+
+
+.content{ .flex; .column; .itemsCenter;
+
+	.limitCenter{ width:80%; max-width:800px; margin:0 0 1em 0; }
+
+	//Structures
+	.block{ width:100%; .column; .itemsCenter; padding:0 0 24px; }
+
+
+		blockquote{ width:65%; max-width:1200px; margin:36px; }
+		h2{ .pv1; }
+
+		.more{ height:0; .overflow; margin:8px 0;
+			p{ width:100%; }
+		}
+
+		.more-button{ .button; .ib; margin:0 auto; }
+
+
+	.caption{ margin:8px 0 24px; }
+
+	.links{ .limitCenter; width:60%;
+		li{ list-style:none; padding-left:0; .mv3; .p; }
+		a{ .anchor; .s3; }
 	}
 
-	.more-button{ .pillButton; margin:0 auto; }
-}
-.arcadium{
+	.max1000{ max-width:1000px; }
+
+
+	//Styles
+
+	h2{ .s1; font-weight:300; letter-spacing:-1.15px; .titleFont; .tcenter; }
+	h3{ .s2; color:@bodyColor; .titleFont; font-weight:500; }
+	.p, li{ .s3; line-height:1.5; .titleFont; color:@bodyColor; text-align:left; letter-spacing:0.05px;
+		a{ .anchor; }
+	}
+	strong{ color:@highlight; }
+	blockquote{ .s3; .quoteFont; .tcenter; font-style:italic; color:@arcadium;
+		.author{ .s4; margin-top:16px; font-weight:bold; .tcenter; }
+		a{ color:@arcadium; }
+	}
+	.caption{ .s4; }
+
+
+
+	p{ .p; .limitCenter; }
+
+
+	//Images
+	.image-grid{ .flex; .row; justify-content:center; flex-wrap:wrap;
+		.img{ width:200px; height:200px; margin:16px; }
+	}
+	.img{ background-position:center center; .bg-size(cover); .flex;
+		&.edged{ width:100%;  height:310px; }
+		&.tall{ @height:500px; width:@height/3*2; height:@height; }
+		&.wide{ @width:400px; width:@width; height:@width/16*9; }
+		&.contain{ .bg-size(contain); }
+	}
+
+
+
+	//Buttons
 
 	@collapsedPadding:10px 20px;
 	@expandedPadding:10px 60px;
 
-	.more-button{ .button; .ib; margin:0 auto; padding:@collapsedPadding; color:@textColor; .titleFont; border-bottom:2px solid @textColor;
+
+	.more-button{ margin:4px 0; padding:@collapsedPadding; color:@bodyColor; .titleFont; .s3; font-weight:400; border-bottom:2px solid @bodyColor;
 		&:hover{ padding:@expandedPadding; color:@arcadium; }
 		&.expanded{ padding:@expandedPadding; }
 		&.expanded:hover{ padding:@collapsedPadding; }
 	}
-}
-
-.pillButton{ .button; .ib; padding:10px 20px; background:@highlight; .button-text; color:white; .br(25px);
-	&:hover{ background:lighten(@highlight, 20%); }
-}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// MISC -----------------------------------
-
-.grid{ width:100%; height:10000px; .abs; left:0; top:0; background:url('../images/grid@2x.png') repeat; background-size:16px 16px; display:none;}
-
-
-
-
-// Password
-body.protected{ overflow:hidden; background:@charcoal;
-	#Web{ display:none;}
-}
-
-.password{ .cover-all; .fixed; background:white; z-index:9999;
-	.input{width:330px; height:32px; .abs; .valign; left:50%; margin-left:-150px;
-		input{ width:200px; height:100%; padding:3px 10px; .rel; top:-1px; background:fade(black,5%); border:0; .lato; .br(4px); }
-		.button{ .button; .lato; }
+	//Timeline
+	.timeline{ .rel; .titleFont;
+		@timelineColor: @bodyColor;
+		.line{ width:1px; height:77%; .abs; left:8px; top:18px; background:lighten(@timelineColor, 50%);}
+		.event{ margin-bottom:10px; 
+			.event-text{ font-weight:bold; margin-left:20px; .s3; color:@bodyColor;
+				&:before{ content:'•'; position:relative; .fs(1.4em); left:-22px; top:4px; color:@timelineColor; }
+			}
+			.date{ margin-left:41px; font-size:1.2em; .op(0.5); }
+		}
 	}
+
 }
 
-
-//Mailchimp
-#mce-EMAIL{ .rel; top:4px; padding:7px 10px; }
-.mc-field-group{ display:inline;
-	> *{ .fl;}
-	.mc-embedded-subscribe{ .pillButton; }
-}
-
-
-
-// Responsive -----------------------------------
-// Landscape phone to portrait tablet
-@media (max-width: 979px) {
-}
- 
-// Landscape phones and down 
-@media (max-width: 780px) {
-}
-@media (max-width: 480px) {
-	.copy{ .fs(22px, 34px); }
-	.h3{ .fs(24px); }
-	.p{ .fs(20px, 32px); }
-	.button-text{ .fs(14px); }
+.footer{
+	.contact{ .s3; font-weight:400; .pv6; }
+		a{ color:@arcadium; }
 }
