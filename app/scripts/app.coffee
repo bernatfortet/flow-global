@@ -1,7 +1,6 @@
 $(document).ready( ->
 	$('.more-button').on('click', onExpand )
 
-	###
 	$('.password form').on('submit', (event) ->
 
 		password = $(event.target).find('input').val()
@@ -16,8 +15,8 @@ $(document).ready( ->
 	)
 	if( window.location.origin == "http://localhost:9000" )
 		init()
-	###
-	init()
+
+	#init()
 
 )
 
