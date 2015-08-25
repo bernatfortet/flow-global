@@ -3,24 +3,21 @@
 
   $(document).ready(function() {
     $('.more-button').on('click', onExpand);
-
-    /*
-    	$('.password form').on('submit', (event) ->
-    
-    		password = $(event.target).find('input').val()
-    		checkPasswordAndGo(password)
-    		event.preventDefault()
-    	)
-    	$('.password .button').on('click', (event) ->
-    
-    		password = $(event.target).parent().find('input').val()
-    		checkPasswordAndGo(password)
-    		event.preventDefault()
-    	)
-    	if( window.location.origin == "http://localhost:9000" )
-    		init()
-     */
-    return init();
+    $('.password form').on('submit', function(event) {
+      var password;
+      password = $(event.target).find('input').val();
+      checkPasswordAndGo(password);
+      return event.preventDefault();
+    });
+    $('.password .button').on('click', function(event) {
+      var password;
+      password = $(event.target).parent().find('input').val();
+      checkPasswordAndGo(password);
+      return event.preventDefault();
+    });
+    if (window.location.origin === "http://localhost:9000") {
+      return init();
+    }
   });
 
   checkPasswordAndGo = function(password) {
