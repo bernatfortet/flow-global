@@ -158,7 +158,7 @@ module.exports = function (grunt) {
                         '.htaccess',
                         'CNAME',
                         'images/{,*/}*.{webp,gif,jpg,png,svg}',
-                        'images_arcadium/{,*/}*.{webp,gif,jpg,png,svg}'
+                        'images_arcadium/{,*/}*.{webp,gif,jpg,png,svg,pdf}'
                     ]
                 }]
             }
