@@ -1005,6 +1005,16 @@ small {
   transition-duration: 150ms;
   transition-timing-function: linear;
 }
+.caption {
+  color: white;
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+}
+.caption p,
+.caption span {
+  color: white;
+}
 @media (max-width: 480px) {
   .copy {
     font-size: 22px;
@@ -1026,4 +1036,7 @@ small {
     line-height: 1;
     letter-spacing: 0;
   }
+}
+.justifyFlexEnd {
+  justify-content: flex-end;
 }

@@ -751,6 +751,13 @@ body {
 .content .caption {
   margin: 8px 0 24px;
 }
+.content .attribution {
+  color: white;
+  padding: 16px;
+  -webkit-text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.05);
+  -moz-text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.05);
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.05);
+}
 .content .links {
   width: 80%;
   max-width: 800px;
@@ -1000,4 +1007,7 @@ body {
 }
 .footer a {
   color: #73a31f;
+}
+.justifyFlexEnd {
+  justify-content: flex-end;
 }
