@@ -523,7 +523,7 @@ input {
   max-width: 850px;
   margin: 0 auto;
   font-size: 26px;
-  line-height: 36px;
+  line-height: 34px;
   letter-spacing: 0;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
@@ -672,7 +672,7 @@ input {
 }
 .footer .content p {
   font-size: 24px;
-  line-height: 36px;
+  line-height: 34px;
   letter-spacing: 0;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.4);
@@ -867,7 +867,7 @@ small {
 }
 .copy {
   font-size: 26px;
-  line-height: 36px;
+  line-height: 34px;
   letter-spacing: 0;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
@@ -879,7 +879,7 @@ small {
 }
 .p {
   font-size: 24px;
-  line-height: 36px;
+  line-height: 34px;
   letter-spacing: 0;
   font-weight: 300;
 }
@@ -1005,6 +1005,16 @@ small {
   transition-duration: 150ms;
   transition-timing-function: linear;
 }
+.caption {
+  color: white;
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+}
+.caption p,
+.caption span {
+  color: white;
+}
 @media (max-width: 480px) {
   .copy {
     font-size: 22px;
@@ -1026,4 +1036,7 @@ small {
     line-height: 1;
     letter-spacing: 0;
   }
+}
+.justifyFlexEnd {
+  justify-content: flex-end;
 }
