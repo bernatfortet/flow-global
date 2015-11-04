@@ -9,15 +9,12 @@
       checkPasswordAndGo(password);
       return event.preventDefault();
     });
-    $('.password .button').on('click', function(event) {
+    return $('.password .button').on('click', function(event) {
       var password;
       password = $(event.target).parent().find('input').val();
       checkPasswordAndGo(password);
       return event.preventDefault();
     });
-    if (window.location.origin === "http://localhost:9000") {
-      return init();
-    }
   });
 
   checkPasswordAndGo = function(password) {

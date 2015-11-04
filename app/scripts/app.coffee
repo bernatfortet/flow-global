@@ -12,9 +12,9 @@ $(document).ready( ->
 		password = $(event.target).parent().find('input').val()
 		checkPasswordAndGo(password)
 		event.preventDefault()
-	)
-	if( window.location.origin == "http://localhost:9000" )
-		init()
+	)	
+	#if( window.location.origin == "http://localhost:9000" )
+	#	init()
 
 	#init()
 
