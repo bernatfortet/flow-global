@@ -1072,6 +1072,7 @@ body {
   text-align: center;
   font-family: 'nimbus-sans', Helvetica, Arial, Sans-Serif, sans-serif;
   display: inline;
+  margin-left: 16px;
 }
 .password .input .button:hover {
   color: #73a31f;

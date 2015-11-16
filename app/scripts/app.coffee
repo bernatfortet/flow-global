@@ -13,8 +13,8 @@ $(document).ready( ->
 		checkPasswordAndGo(password)
 		event.preventDefault()
 	)	
-	#if( window.location.origin == "http://localhost:9000" )
-	#	init()
+	if( window.location.origin == "http://localhost:9000" || window.location.hash == '#pass' )
+		init()
 
 	#init()
 
