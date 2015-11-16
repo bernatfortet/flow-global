@@ -15,11 +15,9 @@
       checkPasswordAndGo(password);
       return event.preventDefault();
     });
-    return setTimeout(function() {
-      if (window.location.origin === "http://localhost:9000" || window.location.hash === '#pass') {
-        return init();
-      }
-    }, 5500);
+    if (window.location.origin === "http://localhost:9000" || window.location.hash === '#pass') {
+      return init();
+    }
   });
 
   checkPasswordAndGo = function(password) {
