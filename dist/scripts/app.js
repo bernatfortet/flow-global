@@ -15,7 +15,7 @@
       checkPasswordAndGo(password);
       return event.preventDefault();
     });
-    if (window.location.origin === "http://localhost:9000") {
+    if (window.location.origin === "http://localhost:9000" || window.location.hash === '#pass') {
       return init();
     }
   });
